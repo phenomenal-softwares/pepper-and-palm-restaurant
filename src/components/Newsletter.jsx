@@ -1,6 +1,6 @@
 // src/components/Newsletter.jsx
 import { motion } from "framer-motion";
-import newsletterImg from "../assets/basket-icon.jpg";
+import newsletterImg from "../assets/basket-icon.png";
 
 const Newsletter = () => {
   return (

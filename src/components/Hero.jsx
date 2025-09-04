@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 import { FiShoppingBag, FiBookOpen } from "react-icons/fi";
 import chefImg from "../assets/chef.png";
 import heroImg from "../assets/hero-bg.jpg";
@@ -58,12 +59,12 @@ function Hero() {
             >
               <FiShoppingBag size={20} /> Order Now
             </a>
-            <a
-              href="#menu"
+            <Link
+              to="/dishes"
               className="flex items-center gap-2 px-6 py-3 rounded-full bg-amber-500 text-white font-semibold shadow-lg hover:bg-amber-600 transition transform hover:scale-105"
             >
               <FiBookOpen size={20} /> View Menu
-            </a>
+            </Link>
           </motion.div>
         </motion.div>
 

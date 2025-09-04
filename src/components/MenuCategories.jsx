@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import swallowImg from "../assets/swallow.jpg";
 import grillsImg from "../assets/grills.jpg";
 import riceImg from "../assets/rice.jpg";
+import pepperSoupImg from "../assets/peppersoup.jpg";
 import beansImg from "../assets/beans.jpg";
 import snacksImg from "../assets/snacks.jpg";
 import drinksImg from "../assets/drinks.jpg";
@@ -11,37 +12,50 @@ import drinksImg from "../assets/drinks.jpg";
 const categories = [
   {
     id: 1,
-    name: "Swallows & Soups",
-    desc: "Traditional Nigerian meals packed with flavor.",
+    name: "Swallows",
+    slug: "swallow",
+    desc: "Pounded yam, eba, amala & other exclusives.",
     image: swallowImg,
   },
   {
     id: 2,
     name: "Grills",
+    slug: "grills",
     desc: "Smoky and spicy grilled meats & fish.",
     image: grillsImg,
   },
   {
     id: 3,
     name: "Rice",
+    slug: "rice",
     desc: "Jollof, fried rice, and other tasty classics.",
     image: riceImg,
   },
   {
     id: 4,
+    name: "Soups",
+    slug: "soups",
+    desc: "Traidtional and Pepper soups to warm your soul.",
+    image: pepperSoupImg,
+  },
+  {
+    id: 5,
     name: "Beans Delights",
+    slug: "beans",
     desc: "Moin-moin, akara, ekuru, and other beans favorites.",
     image: beansImg,
   },
   {
-    id: 5,
+    id: 6,
     name: "Snacks",
+    slug: "snacks",
     desc: "Egg roll, puff-puff, meat pie, and other enjoyables.",
     image: snacksImg,
   },
   {
-    id: 6,
+    id: 7,
     name: "Drinks & Desserts",
+    slug: "drinks",
     desc: "Refreshing local drinks and sweet treats.",
     image: drinksImg,
   },
@@ -71,7 +85,7 @@ export default function MenuCategories() {
               transition={{ delay: index * 0.2, duration: 0.6 }}
               viewport={{ once: true }}
             >
-              <Link to={`/dishes?category=${cat.name}`}>
+              <Link to={`/dishes?category=${cat.slug}`}>
                 <img
                   src={cat.image}
                   alt={cat.name}

@@ -15,6 +15,9 @@ import Newsletter from "./components/Newsletter";
 import foods from "./data/foods";
 import DishesPage from "./pages/DishesPage";
 
+import { ToastProvider } from "./context/ToastContext";
+import { CartProvider } from "./context/CartContext";
+
 function HomePage() {
   return (
     <>
@@ -32,27 +35,31 @@ function HomePage() {
 
 function App() {
   return (
-    <BrowserRouter>
-      <ScrollToTopOnRouteChange />
-      <Routes>
-        <Route
-          path="/"
-          element={
-            <Layout>
-              <HomePage />
-            </Layout>
-          }
-        />
-        <Route
-          path="/dishes"
-          element={
-            <Layout>
-              <DishesPage foods={foods} />
-            </Layout>
-          }
-        />
-      </Routes>
-    </BrowserRouter>
+    <CartProvider>
+      <ToastProvider>
+        <BrowserRouter>
+          <ScrollToTopOnRouteChange />
+          <Routes>
+            <Route
+              path="/"
+              element={
+                <Layout>
+                  <HomePage />
+                </Layout>
+              }
+            />
+            <Route
+              path="/dishes"
+              element={
+                <Layout>
+                  <DishesPage foods={foods} />
+                </Layout>
+              }
+            />
+          </Routes>
+        </BrowserRouter>
+      </ToastProvider>
+    </CartProvider>
   );
 }
 

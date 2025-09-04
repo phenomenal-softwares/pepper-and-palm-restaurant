@@ -1,7 +1,17 @@
 import { motion } from "framer-motion";
 import { FiShoppingCart, FiMaximize2 } from "react-icons/fi";
+import { useCart } from "../context/CartContext";
+import { useToast } from "../context/ToastContext";
 
 function FoodCard({ food, onImageClick }) {
+  const { addToCart } = useCart();
+  const { addToast } = useToast();
+
+  const handleAddToCart = () => {
+    addToCart(food);
+    addToast(`${food.name} added to cart!`);
+  };
+
   return (
     <motion.div
       initial={{ opacity: 0, y: 40 }}
@@ -20,7 +30,6 @@ function FoodCard({ food, onImageClick }) {
           className="w-full h-full object-cover cursor-pointer"
           onClick={onImageClick}
         />
-        {/* View Icon Overlay */}
         <div
           onClick={onImageClick}
           className="absolute inset-0 bg-black/40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition cursor-pointer"
@@ -44,6 +53,7 @@ function FoodCard({ food, onImageClick }) {
           </span>
           <motion.button
             whileTap={{ scale: 0.9 }}
+            onClick={handleAddToCart}
             className="flex items-center gap-2 px-4 py-2 bg-green-600 text-white text-sm font-medium rounded-full shadow-md hover:bg-green-700 transition"
           >
             <FiShoppingCart /> Add
