@@ -168,7 +168,7 @@ const foods = [
     id: 20,
     name: "Puff-Puff",
     description: "Fluffy fried dough balls dusted with sugar.",
-    price: 100,
+    price: 200,
     image: "/foods/snacks-2.jpg",
     category: "snacks",
   },

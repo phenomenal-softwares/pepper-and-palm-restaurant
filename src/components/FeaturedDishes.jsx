@@ -35,7 +35,7 @@ function FeaturedDishes({ foods = [] }) {
   return (
     <div className="py-16 bg-yellow-50 relative">
       <div className="max-w-6xl mx-auto px-4">
-        <h2 className="text-3xl font-bold text-center text-gray-800 mb-12">
+        <h2 className="text-3xl font-bold text-center text-green-800 mb-12">
           Featured Dishes
         </h2>
 

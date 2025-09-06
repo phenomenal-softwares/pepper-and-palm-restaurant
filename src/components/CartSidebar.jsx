@@ -1,15 +1,12 @@
-// CartSidebar.jsx
 import { FiX, FiPlus, FiMinus, FiTrash2 } from "react-icons/fi";
 import { useCart } from "../context/CartContext";
+import { useNavigate } from "react-router";
 
 function CartSidebar({ isOpen, onClose }) {
-  const {
-    cartItems,
-    increaseQty,
-    decreaseQty,
-    removeFromCart,
-    totalPrice,
-  } = useCart();
+  const { cartItems, increaseQty, decreaseQty, removeFromCart, totalPrice } =
+    useCart();
+
+  const navigate = useNavigate();
 
   return (
     <div
@@ -75,7 +72,13 @@ function CartSidebar({ isOpen, onClose }) {
           <span className="font-semibold">Subtotal:</span>
           <span className="font-bold">₦{totalPrice.toLocaleString()}</span>
         </div>
-        <button className="w-full py-2 bg-green-600 text-white font-semibold rounded-lg hover:bg-green-700">
+        <button
+          onClick={() => {
+            onClose();
+            navigate("/order");
+          }}
+          className="w-full py-2 bg-green-600 text-white font-semibold rounded-lg hover:bg-green-700"
+        >
           Checkout
         </button>
       </div>

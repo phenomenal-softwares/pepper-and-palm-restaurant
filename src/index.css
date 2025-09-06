@@ -6,6 +6,48 @@ body {
   background-color: #fefce8;
 }
 
+/* Custom Scrollbar only on mobile */
+@media (max-width: 640px) {
+  .filter-scrollbar::-webkit-scrollbar {
+    height: 8px; /* horizontal scrollbar height */
+  }
+
+  .filter-scrollbar::-webkit-scrollbar-track {
+    background: #fef9c3; /* brand yellow-100 */
+    border-radius: 9999px;
+  }
+
+  .filter-scrollbar::-webkit-scrollbar-thumb {
+    background: #15803d; /* brand green-700 */
+    border-radius: 9999px;
+  }
+
+  .filter-scrollbar::-webkit-scrollbar-thumb:hover {
+    background: #166534; /* darker green */
+  }
+
+  /* Firefox */
+  .filter-scrollbar {
+    scrollbar-width: thin;
+    scrollbar-color: #15803d #fef9c3;
+  }
+}
+
+/* Hide scrollbar completely on desktop */
+@media (min-width: 641px) {
+  .filter-scrollbar {
+    overflow-x: hidden; /* Hide horizontal scrollbar */
+  }
+  .filter-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  .filter-scrollbar {
+    scrollbar-width: none; /* Firefox */
+  }
+}
+
+/* Animations */
+
 @keyframes gradientMove {
   0% {
     background-position: 0% 50%;
