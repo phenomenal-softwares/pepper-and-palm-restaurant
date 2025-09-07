@@ -1,70 +1,53 @@
-# Getting Started with Create React App
+# 🍲 Pepper&Palm – Food Ordering Web App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Pepper & Palm is a modern React-based food ordering platform for a Nigerian restaurant.  
+It features a smooth UI, dynamic menus, cart & order system, and responsive design optimized for both desktop and mobile.
 
-## Available Scripts
+---
 
-In the project directory, you can run:
+## ✨ Features
 
-### `npm start`
+- 🥘 **Browse Dishes** – Filter by categories (Rice, Grills, Swallow, Snacks, etc.)
+- 🔍 **Search Functionality** – Smart search bar on both navbar and dishes page
+- 🛒 **Cart System** – Add/remove dishes, live totals, item counts
+- 📦 **Order Page** – Displays order summary, delivery fee, and confirmation modal
+- ✅ **Success Modal** – Beautiful animated order success screen with checkmark + chef mascot
+- 📱 **Responsive Design** – Optimized for mobile with collapsible menus and scrollable filters
+- 🔔 **Toast Notifications** – For cart updates, errors, and confirmations
+- 📍 **Contact Page** – Location info (Idumota, Lagos) with quick link to Google Maps
+- 👨‍🍳 **Chef Hero & Branding** – Strong Nigerian theme with Pepper & Palm branding
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+---
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## 🛠️ Tech Stack
 
-### `npm test`
+- **Frontend**: [React](https://react.dev/), [React Router](https://reactrouter.com/), [Framer Motion](https://www.framer.com/motion/)  
+- **Styling**: [Tailwind CSS](https://tailwindcss.com/)  
+- **UI Icons**: [React Icons](https://react-icons.github.io/react-icons/)  
+- **Lightbox**: [yet-another-react-lightbox](https://yet-another-react-lightbox.com/)  
+- **Deployment**: [Vercel](https://vercel.com/)  
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+---
 
-### `npm run build`
+## 🚀 Getting Started
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Prerequisites
+- Node.js (>= 16)
+- npm or yarn
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Project Structure
+src/
+ ├─ assets/         # images (chef, dishes, etc.)
+ ├─ components/     # reusable UI components
+ ├─ context/        # Cart & Toast contexts
+ ├─ data/           # static food data
+ ├─ pages/          # page components (Home, Dishes, Order, About, Contact)
+ ├─ App.jsx         # routes setup
+ ├─ index.css       # Tailwind styles
+ └─ main.jsx        # entry point
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## License
+This project is licensed under the MIT License.
 
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## Developer
+Developed by Abiodun Ojo for Phenomenal Productions (https://phenomenalproductions.com.ng) – bringing Nigerian food culture online.

@@ -54,19 +54,25 @@ function ContactPage() {
         ))}
       </section>
 
-      {/* Map Section */}
+      {/* Location Section (Map Placeholder) */}
       <section className="max-w-6xl mx-auto px-6 mb-16">
-        <div className="rounded-2xl overflow-hidden shadow-lg">
-          <iframe
-          title="restaurant-location"
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3964.5077437852674!2d3.381580473628992!3d6.457165923933461!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x103b8b0c707bc7bd%3A0xe51de56d120b7265!2sIdumota%20Market!5e0!3m2!1sen!2sng!4v1757185576477!5m2!1sen!2sng"
-            width="600"
-            height="450"
-            style={{ border: 0 }}
-            allowfullscreen=""
-            loading="lazy"
-            referrerpolicy="no-referrer-when-downgrade"
-          ></iframe>
+        <div className="bg-green-50 border border-green-200 rounded-2xl shadow-lg p-8 flex flex-col items-center text-center">
+          <div className="bg-green-600 text-white w-16 h-16 flex items-center justify-center rounded-full mb-4">
+            📍
+          </div>
+          <h3 className="text-2xl font-bold text-green-800 mb-2">Find Us</h3>
+          <p className="text-gray-700 max-w-md">
+            We are located at the heart of Lagos Island — Idumota. Stop by and
+            enjoy your favorite Nigerian dishes with a touch of home.
+          </p>
+          <a
+            href="https://www.google.com/maps/search/?api=1&query=Idumota+Lagos"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="mt-6 px-6 py-3 bg-green-700 text-white rounded-lg font-semibold hover:bg-green-800 transition"
+          >
+            View on Google Maps
+          </a>
         </div>
       </section>
 
