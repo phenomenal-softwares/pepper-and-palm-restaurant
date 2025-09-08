@@ -6,6 +6,7 @@ import foods from "./data/foods";
 
 //components
 import Layout from "./components/Layout";
+import LoadingScreen from "./components/LoadingScreen";
 import ScrollToTopOnRouteChange from "./components/ScrollToTopOnRouteChange";
 import Hero from "./components/Hero";
 import FeaturedDishes from "./components/FeaturedDishes";
@@ -32,7 +33,9 @@ function HomePage() {
       <Hero />
       <FeaturedDishes foods={foods} />
       <AboutUs />
-      <MenuCategories />
+      <div id="menu">
+        <MenuCategories />
+      </div>
       <SpecialOffer />
       <Testimonials />
       <CTA />
@@ -47,6 +50,7 @@ function App() {
       <ToastProvider>
         <BrowserRouter>
           <ScrollToTopOnRouteChange />
+          <LoadingScreen />
           <Routes>
             <Route
               path="/"

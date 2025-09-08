@@ -52,10 +52,14 @@ function Navbar({ onCartToggle }) {
   // Close search dropdown on outside click or Esc key
   useEffect(() => {
     const handleClickOutside = (e) => {
-      if (searchRef.current && !searchRef.current.contains(e.target)) {
-        setSearchOpen(false);
+      // Only apply outside click logic for desktop search
+      if (window.innerWidth >= 768) {
+        if (searchRef.current && !searchRef.current.contains(e.target)) {
+          setSearchOpen(false);
+        }
       }
     };
+
     const handleEsc = (e) => {
       if (e.key === "Escape") {
         setSearchOpen(false);
@@ -199,6 +203,7 @@ function Navbar({ onCartToggle }) {
               <AnimatePresence>
                 {searchOpen && (
                   <motion.form
+                    onClick={(e) => e.stopPropagation()} // 👈 prevent auto-close
                     onSubmit={handleSearch}
                     initial={{ opacity: 0, y: -10 }}
                     animate={{ opacity: 1, y: 0 }}
@@ -352,10 +357,10 @@ function Navbar({ onCartToggle }) {
               <Link
                 to="/order"
                 className={
-                    location.pathname.startsWith("/order")
-                      ? "text-green-800 font-medium"
-                      : "text-gray-900 hover:text-green-800 font-medium"
-                  }
+                  location.pathname.startsWith("/order")
+                    ? "text-green-800 font-medium"
+                    : "text-gray-900 hover:text-green-800 font-medium"
+                }
                 onClick={() => setIsOpen(false)}
               >
                 Order
@@ -363,10 +368,10 @@ function Navbar({ onCartToggle }) {
               <Link
                 to="/about"
                 className={
-                    location.pathname.startsWith("/about")
-                      ? "text-green-800 font-medium"
-                      : "text-gray-900 hover:text-green-800 font-medium"
-                  }
+                  location.pathname.startsWith("/about")
+                    ? "text-green-800 font-medium"
+                    : "text-gray-900 hover:text-green-800 font-medium"
+                }
                 onClick={() => setIsOpen(false)}
               >
                 About
@@ -374,10 +379,10 @@ function Navbar({ onCartToggle }) {
               <Link
                 to="/contact"
                 className={
-                    location.pathname.startsWith("/contact")
-                      ? "text-green-800 font-medium"
-                      : "text-gray-900 hover:text-green-800 font-medium"
-                  }
+                  location.pathname.startsWith("/contact")
+                    ? "text-green-800 font-medium"
+                    : "text-gray-900 hover:text-green-800 font-medium"
+                }
                 onClick={() => setIsOpen(false)}
               >
                 Contact

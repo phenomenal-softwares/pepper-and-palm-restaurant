@@ -144,7 +144,7 @@ function DishesPage({ foods }) {
           ))}
         </div>
       ) : (
-        <p className="text-center text-gray-600 mt-12">No dishes found.</p>
+        <p className="text-center text-gray-600 my-12">Sorry, no available dishes matched your search '{searchQuery}'</p>
       )}
 
       {/* ✅ Lightbox */}

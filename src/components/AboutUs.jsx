@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 import aboutImg from "../assets/about-us.jpg";
 
 function AboutUs() {
@@ -30,19 +31,23 @@ function AboutUs() {
             Our Story
           </h2>
           <p className="text-gray-700 leading-relaxed mb-6">
-            At <span className="font-semibold text-yellow-600">Pepper & Palm</span>, 
-            we bring the heart of Nigeria to your table. From sizzling grills to 
-            soulful soups, our dishes are crafted with love, tradition, and a 
-            touch of modern flavor. 
+            At{" "}
+            <span className="font-semibold text-yellow-600">Pepper & Palm</span>
+            , we bring the heart of Nigeria to your table. From sizzling grills
+            to soulful soups, our dishes are crafted with love, tradition, and a
+            touch of modern flavor.
           </p>
           <p className="text-gray-700 leading-relaxed mb-6">
-            Whether you crave jollof rice, smoky suya, or rich egusi soup, every 
-            meal is a celebration of culture, family, and flavor. Step into our 
+            Whether you crave jollof rice, smoky suya, or rich egusi soup, every
+            meal is a celebration of culture, family, and flavor. Step into our
             kitchen and experience Naija cuisine the way it’s meant to be.
           </p>
-          <button className="bg-green-600 hover:bg-green-700 text-white px-6 py-3 rounded-lg font-semibold shadow-md transition">
+          <Link
+            to="/about"
+            className="bg-green-600 hover:bg-green-700 text-white px-6 py-3 rounded-lg font-semibold shadow-md transition"
+          >
             Learn More
-          </button>
+          </Link>
         </motion.div>
       </div>
     </section>

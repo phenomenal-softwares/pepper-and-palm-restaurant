@@ -1,5 +1,5 @@
-// src/components/SpecialOffer.jsx
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 import riceImg from "../assets/jollof-chicken.jpg";
 
 export default function SpecialOffer() {
@@ -40,7 +40,7 @@ export default function SpecialOffer() {
             whileTap={{ scale: 0.95 }}
             className="mt-4 px-8 py-3 bg-white text-[#028174] font-bold text-lg rounded-xl shadow-lg hover:bg-yellow-50 transition"
           >
-            Order Now
+            <Link to={"/dishes?category=rice"}>Order Now</Link>
           </motion.button>
         </motion.div>
 

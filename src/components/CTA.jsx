@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 import bgImage from "../assets/chef-2.jpg";
 
 const CTA = () => {
@@ -39,7 +40,9 @@ const CTA = () => {
           whileHover={{ scale: 1.1 }}
           whileTap={{ scale: 0.95 }}
         >
+          <Link to="/dishes">
           Order Now
+          </Link>
         </motion.button>
       </div>
     </section>
