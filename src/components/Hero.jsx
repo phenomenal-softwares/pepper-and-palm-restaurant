@@ -31,7 +31,7 @@ function Hero() {
           initial={{ opacity: 0, y: -50 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1 }}
-          className="text-center mt-5 pt-9 md:text-left max-w-xl"
+          className="text-center mt-20 pt-9 md:text-left max-w-xl"
         >
           <motion.h1
             initial={{ opacity: 0, y: -30 }}
