@@ -1,12 +1,19 @@
-// src/components/LoadingScreen.jsx
 import { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { useLocation } from "react-router-dom";
-import { GiKnifeFork } from "react-icons/gi"; // ✅ this one exists
+import { GiKnifeFork } from "react-icons/gi";
 
 function LoadingScreen() {
   const [loading, setLoading] = useState(true);
   const location = useLocation();
+
+  useEffect(() => {
+  if (loading) {
+    document.body.style.overflow = "hidden"; // prevent weird scrollbars
+  } else {
+    document.body.style.overflow = "";
+  }
+}, [loading]);
 
   useEffect(() => {
     setLoading(true);
